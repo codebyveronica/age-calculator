@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --dark-grey: #7b7b7b;
+  --grey: #f2f2f2;
+  --blue: #0033ff;
+  --dark-blue: #0a248e;
+  --light-yellow: #faecb3;
+  --green: #7ca386;
+  --red: #ff1919a8;
+
+
+  --font: "Roboto", sans-serif;
+}
+
+* {
+  padding: 0em;
+  margin: 0em;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font);
+}
+
+body {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--grey);
+  margin: 1em;
+}
+
+.container {
+  width: auto;
+  background-color: white;
+  padding: 1.5em 1.5em .5em 1.5em;
+  border-radius: 1em;
+}
+
+.fill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+label, input {
+  display: block;
+  margin-bottom: .25em;
+}
+
+label {
+  color: var(--dark-grey);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: .3em;
+}
+
+label.error {
+  color: var(--red);
+}
+
+label > span {
+  color: var(--red);
+  font-size: .6rem;
+  letter-spacing: normal;
+}
+
+input {
+  font-family: var(--font);
+  font-weight: 500;
+  padding-left: 1em;
+  width: 90px;
+  height: 35px;
+  border: .03em solid var(--dark-grey);
+  border-radius: .5em;
+  margin-top: .5em;
+}
+
+input.error {
+  border-color: var(--red);
+}
+
+input:focus {
+  outline: none;
+}
+
+input:hover{
+  border-color: var(--blue);
+}
+
+button {
+  display: block;
+  width: 100%;
+  color: white;
+  background-color: var(--green);
+  font-family: var(--font);
+  font-weight: 500;
+  letter-spacing: .1em;
+  padding: 1em;
+  border: none;
+  border-radius: 1.5em;
+  margin: .5em 0 2em;
+  cursor: pointer;
+}
+
+button:hover {
+  color: var(--green);
+  background-color: var(--grey);
+}
+
+.age {
+  background-color: var(--dark-blue);
+  border-radius: .5em;
+  padding: 1em;
+}
+
+.age p {
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: .1em;
+  margin-bottom: 1em;
+}
+
+.years, .months, .days {
+  color: white;
+  text-align: center;
+}
+
+.years strong, .months strong, .days strong {
+  background-color: white;
+  color: black;
+  width: 60px;
+  display: block;
+  padding: 1em;
+  border-radius: .5em;
+}
+
+.years span, .months span, .days span {
+  display: block;
+  margin-top: .25em;
+  font-size: 0.9rem;
+}
+
+.age .current-date {
+  display: block;
+  text-align: center;
+  color: var(--grey);
+  font-size: .8em;
+  margin-top: 1em;
+}
+
+.date-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.extra-information {
+  margin-top: 1.5em;
+  font-size: 0.9em;
+}
+
+.extra-information > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  font-weight: 500;
+}
+
+.next-birthday {
+  background-color: var(--light-yellow);
+  padding: 1em;
+  border-radius: 1em;
+  margin-top: 1em;
+}
+
+.next-birthday p {
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+
+.until-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1em;
+}
+
+.days-until, .hours-until {
+  text-align: center;
+}
+
+.days-until strong, .hours-until strong{
+  display: block;
+  background-color: white;
+  width: 40px;
+  padding: .5em;
+}
+
+.days-until span, .hours-until span {
+  color: var(--dark-grey);
+  font-size: .7rem;
+}
+
+.week-day span {
+  font-size: .9rem;
+  color: var(--dark-grey);
+}
+
+.week-day span > strong {
+  color: black;
+  font-size: .9rem;
+  font-weight: 500;
+}
