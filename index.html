@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <script defer src="script.js"></script>
+  <title>Age Calculator</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Fill birthday -->
+    <div class="birthday">
+      <div class="fill">
+        <label for="day" id="dayLabel">DAY
+          <input type="number" id="day">
+          <span id="dayFeedbackElement"></span>
+        </label>
+        <label for="Month" id="monthLabel">MONTH
+          <input type="number" id="month">
+          <span id="monthFeedbackElement"></span>
+        </label>
+        <label for="year" id="yearLabel">YEAR
+          <input type="number" id="year">
+          <span id="yearFeedbackElement"></span>
+        </label>
+      </div>
+      
+      <button id="calculateBtn">Calculate</button>
+
+      <!-- Age -->
+      <div class="age">
+        <p>Your Age is</p>
+        <div class="date-container">
+          <div class="years">
+            <strong id="yearsTxt">--</strong>
+            <span>Years</span>
+          </div>
+          <div class="months">
+            <strong id="monthsTxt">--</strong>
+            <span>Months</span>
+          </div>
+          <div class="days">
+            <strong id="daysTxt">--</strong>
+            <span>Days</span>
+          </div>
+        </div>
+
+        <span class="current-date" id="current-date">for currrent --/--/--</span>
+            </div>
+      </div>
+
+    <!-- Extra information -->
+    <div class="extra-information">
+      <div class="total-years">
+        <p>Total Years</p>
+        <span id="total-years">--</span>
+      </div>
+      <div class="total-months">
+        <p>Total Months</p>
+        <span id="total-months">--</span>
+      </div>
+      <div class="total-weeks">
+        <p>Total Weeks</p>
+        <span id="total-weeks">--</span>
+      </div>
+      <div class="total-days">
+        <p>Total Days</p>
+        <span id="total-days">--</span>
+      </div>
+      <div class="total-hours">
+        <p>Total Hours</p>
+        <span id="total-hours">--</span>
+      </div>
+      <div class="total-minutes">
+        <p>Total Minutes</p>
+        <span id="total-minutes">--</span>
+      </div>
+      <div class="total-seconds">
+        <p>Total Seconds</p>
+        <span id="total-seconds">--</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Days until next birthday -->
+  <div class="next-birthday">
+    <p>Next Birthday</p>
+    <div class="until-container">
+      <div class="days-until">
+        <strong id="days-until">--</strong>
+        <span>Days</span>
+      </div>
+      <div class="hours-until">
+        <strong id="hours-until">--</strong>
+        <span>Hours</span>
+      </div>
+      <div class="week-day">
+        <span>Your Birthday is on <br> <strong id="week-day">--</strong> this year</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
