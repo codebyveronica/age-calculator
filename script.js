@@ -12,6 +12,18 @@ const yearsTxt = document.querySelector('#yearsTxt');
 const monthsTxt = document.querySelector('#monthsTxt');
 const daysTxt = document.querySelector('#daysTxt');
 
+const totalYearsTxt = document.querySelector('#total-years');
+const totalMonthsTxt = document.querySelector('#total-months');
+const totalWeeksTxt = document.querySelector('#total-weeks');
+const totalDaysTxt = document.querySelector('#total-days');
+const totalHoursTxt = document.querySelector('#total-hours');
+const totalMinutesTxt = document.querySelector('#total-minutes');
+const totalSecondsTxt = document.querySelector('#total-seconds');
+
+const daysUntilTxt = document.querySelector('#days-until');
+const hoursUntilTxt = document.querySelector('#hours-until');
+const weekDayTxt = document.querySelector('#week-day');
+
 // Functions
 const daysInMonth = (year, month) => new Date(year, month, 0).getDate();
 
@@ -107,14 +119,6 @@ const calculateAge = (day, month, year) => {
   let totalMinutes = totalDays * 60;
   let totalSeconds = totalMinutes * 60;
 
-  const totalYearsTxt = document.querySelector('#total-years');
-  const totalMonthsTxt = document.querySelector('#total-months');
-  const totalWeeksTxt = document.querySelector('#total-weeks');
-  const totalDaysTxt = document.querySelector('#total-days');
-  const totalHoursTxt = document.querySelector('#total-hours');
-  const totalMinutesTxt = document.querySelector('#total-minutes');
-  const totalSecondsTxt = document.querySelector('#total-seconds');
-
   totalYearsTxt.innerHTML = ageYears;
   totalMonthsTxt.innerHTML = totalMonths;
   totalWeeksTxt.innerHTML = totalWeeks;
@@ -142,10 +146,6 @@ const timeUntilBirthday = (day, month) => {
   const dayOfTheWeek = nextBirthday.getDay();
   const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-  const daysUntilTxt = document.querySelector('#days-until');
-  const hoursUntilTxt = document.querySelector('#hours-until');
-  const weekDayTxt = document.querySelector('#week-day');
-
   daysUntilTxt.innerHTML = differenceInDays;
   hoursUntilTxt.innerHTML = differenceInHours;
   weekDayTxt.innerHTML = daysOfWeek[dayOfTheWeek];
@@ -162,5 +162,17 @@ calculateBtn.addEventListener('click', (e) => {
     yearsTxt.innerHTML = '--';
     monthsTxt.innerHTML = '--';
     daysTxt.innerHTML = '--';
+
+    totalYearsTxt.innerHTML = '--';
+    totalMonthsTxt.innerHTML = '--';
+    totalWeeksTxt.innerHTML = '--';
+    totalDaysTxt.innerHTML = '--';
+    totalHoursTxt.innerHTML = '--';
+    totalMinutesTxt.innerHTML = '--';
+    totalSecondsTxt.innerHTML = '--';
+
+    daysUntilTxt.innerHTML = '--';
+    hoursUntilTxt.innerHTML = '--';
+    weekDayTxt.innerHTML = '--';
   }
 })
